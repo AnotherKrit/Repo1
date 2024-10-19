@@ -57,6 +57,8 @@ jobs:
           context: "{{defaultContext}}:images/echo-server"
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+        env:
+          SOURCE_DATE_EPOCH: 0
 
       - name: Output image
         id: image
